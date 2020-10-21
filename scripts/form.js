@@ -1,4 +1,6 @@
 function Load() {
+
+    /*Counter*/
     let points = 0;
 
     const checkBox = document.getElementsByClassName("check");
@@ -8,6 +10,7 @@ function Load() {
     btn.addEventListener("click", myFunction);
     arrow.addEventListener("click", arrowClick);
 
+    /*Form close*/
     function myFunction() {
         document.getElementById("form").style.height = "5vh";
         document.getElementById("form-items").style.visibility = "hidden";
@@ -15,7 +18,7 @@ function Load() {
     }
 
 
-
+    /*Arrow animation*/
     function arrowClick() {
         if(arrow.classList.contains("open")){
             arrow.classList.remove("open");

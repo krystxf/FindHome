@@ -4,22 +4,25 @@
 <head>
   <!-- css -->
   <link rel="stylesheet" href="styles/index.css">
-  <!-- map javascript -->
-  <script src="scripts/form.js"></script>
-  <script src="scripts/mapa.js"></script>
-  <title>Find home</title>
-  <link rel="icon" type="image/png" href="images/find-home.ico">
-
   <link rel="stylesheet" href="styles/anim.css">
 
-  <!-- Radši bych to tady nechal pro jistotu-->
-  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
-
+  <!-- map formscript -->
+  <script src="scripts/form.js"></script>
+  <!-- map javascript -->
+  <script src="scripts/mapa.js"></script>
+    
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="images/find-home.ico">
+  
   <!-- map API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqac8iFjKYK_AIRaoRxXfYaTJE3CSkmUI&callback=initMap&libraries=visualization&v=weekly" defer></script>
+
+  <title>Find home</title>
+
 </head>
 
 <body onload="Load()">
+  <!-- menu -->
   <div id="navbar">
     <img src="images/find-home-web" id="logo"></img>
     <ul>
@@ -27,9 +30,9 @@
       <li><a href="#">O PROJEKTU</a></li>
       <li><a href="#">KONTAKT</a></li>
     </ul>
-
   </div>
 
+  <!-- form -->
   <div id="form">
     <div id="form-items">
       <div id="checkboxes">
@@ -48,9 +51,10 @@
   </div>
 
 
-
+  <!-- map -->
   <div id="map">
   </div>
+  <!-- map-settings -->
   <div id="map-settings">
     <ul>
       <li><a onclick="changeOpacity()">opacity</a></li>
