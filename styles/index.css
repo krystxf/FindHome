@@ -3,54 +3,76 @@
   src: url(fonts/Evogria.otf);
 }
 
-input[type="checkbox"] { display: none; }
-
-input[type="checkbox"] + label {
+.container {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 20px;
-  padding-top: 0.1em;
-  color: white;
+  margin-bottom: 12px;
   cursor: pointer;
+  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 
-input[type="checkbox"] + label:last-child { margin-bottom: 0; }
-
-input[type="checkbox"] + label:before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
+/* Hide the browser's default checkbox */
+.container input {
   position: absolute;
-  left: 0;
-  top: 0;
-  opacity: .6;
-  -webkit-transition: all .12s, border-color .08s;
-  transition: all .12s, border-color .08s;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
-input[type="checkbox"]:checked + label:before {
-  width: 10px;
-  top: -5px;
-  left: 5px;
-  border-radius: 0;
-  opacity: 1;
-  border-top-color: transparent;
-  border-left-color: transparent;
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #006464;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 
-
-
-html, body
-{
+html,
+body {
   color: #eee;
   background-color: #fff;
   font-family: evogria, sans-serif;
@@ -58,8 +80,7 @@ html, body
   padding: 0;
 }
 
-#navbar
-{
+#navbar {
   background-color: #eee;
   color: #242424;
   display: inline-block;
@@ -70,18 +91,16 @@ html, body
   width: 100%;
 }
 
-#navbar ul
-{
+#navbar ul {
   float: right;
   margin: 0;
-  padding-top: 10px;
+  padding-top: 0.6em;
   padding-right: 1em;
   list-style-type: none;
 }
 
-#navbar li
-{
-  background-color: #37B6AD;
+#navbar li {
+  background-color: #37b6ad;
   padding-top: 10px;
   display: inline-block;
   margin-right: 1em;
@@ -91,33 +110,33 @@ html, body
   border-radius: 10px;
   cursor: pointer;
 }
-#navbar li:hover{
+
+#navbar li:hover {
   background-color: #006464;
 }
 
-#logo{
+#logo {
   height: 75%;
   padding-top: 0.6em;
   padding-left: 1em;
 }
 
-#comp{
+#comp {
   text-align: center;
 }
 
-#check{
+#check {
   padding-top: 3em;
   padding-left: 3em;
 }
 
-#checkbox
-{
+#checkbox {
   list-style-type: none;
 }
 
-#form{
+#form {
   border-radius: 10px;
-  background-color: #37B6AD;
+  background-color: #37b6ad;
   margin: auto;
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -125,25 +144,21 @@ html, body
   height: 50vh;
 }
 
-#navbar ul li a
-{
+#navbar ul li a {
   color: #fff;
-  padding-top: 10px;
   font-size: 23px;
   text-decoration: none;
   cursor: pointer;
 }
 
-#map
-{
+#map {
   margin: auto;
   width: 90%;
   height: 90vh;
   border-radius: 10px 10px 0 0;
 }
 
-#map-settings
-{
+#map-settings {
   background-color: #006464;
   color: white;
   margin: auto;
@@ -151,22 +166,21 @@ html, body
   height: 3em;
   border-radius: 0 0 10px 10px;
 }
-#map-settings ul
-{
+
+#map-settings ul {
   margin: 0;
 }
-#map-settings li
-{
+
+#map-settings li {
   list-style-type: none;
   display: inline-block;
 }
-#map-settings li a 
-{
+
+#map-settings li a {
   cursor: pointer;
 }
 
-.map-button
-{
+.map-button {
   background-color: #006464;
   color: white;
   height: 2em;

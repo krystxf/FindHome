@@ -3,7 +3,7 @@
 
 <head>
   <!-- css -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="styles/index.css">
   <!-- map javascript -->
   <script src="scripts/form.js"></script>
   <script src="scripts/mapa.js"></script>
@@ -25,15 +25,17 @@
       <li><a href="#">O PROJEKTU</a></li>
       <li><a href="#">KONTAKT</a></li>
     </ul>
+
   </div>
 
-  <div id="form">
-    <div id="check">
-      <input type="checkbox" id="box-1">
-      <label for="box-1">TEST</label>
+  <form id="form" action="index.php" method="GET">
+    <div id="checkboxes">
+    <label class="container">TEST
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
     </div>
-    <div type="button" id="comp" onclick="comp()">Vyhodnoť</div>
-  </div>
+  </form>
 
   <div id="map">
   </div>
