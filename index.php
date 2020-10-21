@@ -14,17 +14,24 @@
   </head>
   <body>
     <div id = "title">
-kde domov můj
-  </div>
+      kde domov můj
+    </div>
 
 
     <div id="floating-panel">
       <button onclick="changeOpacity()">Change opacity</button>
     </div>
+    <div id = "content">
   <div id="form">
-    
-</div>
+    <h2>Form</h2>
+    <form>
+
+</form>
+  </div>
     <div id="map">
     </div>
+</div>
+<div id ="table">
+</table>
   </body>
 </html>
