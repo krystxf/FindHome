@@ -19,7 +19,7 @@
 
 <body>
   <div id="navbar">
-    <img src="images/find-home-web" height="100%"></img>
+    <img src="images/find-home-web" id="logo"></img>
     <ul>
       <li><a href="#map">MAPA</a></li>
       <li><a href="#">O PROJEKTU</a></li>
@@ -35,6 +35,12 @@
       <li> <input type="checkbox" class="check"></input></li>
       <li> <input type="checkbox" class="check"></input></li>
     </ul>
+
+    <p>
+    <input type="checkbox" id="test1" />
+    <label for="test1">TEST</label>
+  </p>
+
     <div type="button" id="comp" onclick="comp()">Vyhodnoť</div>
   </div>
 
