@@ -1,68 +1,115 @@
+@font-face {
+  font-family: evogria;
+  src: url(fonts/Evogria.otf);
+}
+
 html, body
 {
+  background-color: #fff;
+  font-family: evogria, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  font-family: sans-serif;
 }
 #navbar
 {
-  display: inline-block;
   background-color: #eee;
+  color: #242424;
+  display: inline-block;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
-  color: #242424;
-  height: 6vh;
+  height: 70px;
   width: 100%;
-  font-size: 2vh;
 }
 
 #navbar ul
 {
-  list-style-type: none;
-  display: inline-block;
   float: right;
+  margin: 0;
+  padding-top: 15px;
+  padding-right: 30px;
+  list-style-type: none;
 }
 
 #navbar li
 {
-  float: right;
+  background-color: #37B6AD;
+  padding-top: 10px;
+  display: inline-block;
   margin-right: 1em;
   text-align: center;
   width: 149px;
   height: 40px;
-  background-color: #37B6AD;
-  border-radius: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#navbar li:hover{
+  background-color: #006464;
 }
 
-#navbar li a
+#comp{
+  text-align: center;
+}
+
+#checkbox
+{
+  list-style-type: none;
+}
+
+#form{
+  border-radius: 10px;
+  background-color: #37B6AD;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 90%;
+  height: 50vh;
+}
+
+#navbar ul li a
 {
   color: #fff;
+  padding-top: 10px;
+  font-size: 23px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #map
 {
   margin: auto;
   width: 90%;
-  height: 100vh;
+  height: 90vh;
   border-radius: 10px 10px 0 0;
 }
 
 #map-settings
 {
+  background-color: #006464;
+  color: white;
   margin: auto;
   width: 90%;
-  background-color: #006464;
   height: 3em;
   border-radius: 0 0 10px 10px;
+}
+#map-settings ul
+{
+  margin: 0;
+}
+#map-settings li
+{
+  list-style-type: none;
+  display: inline-block;
+}
+#map-settings li a 
+{
+  cursor: pointer;
 }
 
 .map-button
 {
-  color: white;
   background-color: #006464;
+  color: white;
   height: 2em;
   width: auto;
   padding: auto;
@@ -72,17 +119,14 @@ html, body
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
