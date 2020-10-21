@@ -26,8 +26,8 @@ html, body
 {
   float: right;
   margin: 0;
-  padding-top: 15px;
-  padding-right: 30px;
+  padding-top: 10px;
+  padding-right: 1em;
   list-style-type: none;
 }
 
@@ -45,6 +45,12 @@ html, body
 }
 #navbar li:hover{
   background-color: #006464;
+}
+
+#logo{
+  height: 75%;
+  padding-top: 0.6em;
+  padding-left: 1em;
 }
 
 #comp{
@@ -126,6 +132,7 @@ html, body
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
