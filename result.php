@@ -32,7 +32,7 @@
       fetch('https://hackathon.madhome.cf/api/getobce?okres=' + okres)
         .then(response => response.json())
         .then(data => {
-          data.forEach(item => drawPoint(item.nazev, 20, map))
+          data.forEach(item => drawPoint(item.nazev, 20, map));
         });
         drawPoint("Starý Máteřov", 60, map);
     }

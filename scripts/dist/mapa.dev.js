@@ -12,6 +12,13 @@ function initMap() {
   zmrdeVykresliBod("Pardubice", geocoder, map, 60);
 }
 
+var slider = document.querySelector("#sliderValue");
+
+slider.oninput = function () {
+  console.log(this.value);
+  heatmap.set("opacity", this.value / 100);
+};
+
 function zmrdeVykresliBod(address, geocoder, resultsMap, radius) {
   geocoder.geocode({
     address: address
