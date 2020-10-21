@@ -10,6 +10,8 @@
   <title>Find home</title>
   <link rel="icon" type="image/png" href="images/find-home.ico">
 
+  <link rel="stylesheet" href="styles/anim.css">
+
   <!-- Radši bych to tady nechal pro jistotu-->
   <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
 
@@ -17,7 +19,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqac8iFjKYK_AIRaoRxXfYaTJE3CSkmUI&callback=initMap&libraries=visualization&v=weekly" defer></script>
 </head>
 
-<body>
+<body onload="Load()">
   <div id="navbar">
     <img src="images/find-home-web" id="logo"></img>
     <ul>
@@ -28,14 +30,24 @@
 
   </div>
 
-  <form id="form" action="index.php" method="GET">
-    <div id="checkboxes">
-    <label class="container">TEST
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
+  <div id="form">
+    <div id="form-items">
+      <div id="checkboxes">
+        <label class="container">TEST
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <button id="btn-comp">POSLAT</button>
+
+      <a id="arrow-icon">
+        <span class="left-bar"></span>
+        <span class="right-bar"></span>
+      </a>
     </div>
-  </form>
+  </div>
+
+
 
   <div id="map">
   </div>
@@ -47,7 +59,6 @@
   <?php
   echo "helou, tady bude ta pravá šmakuláááááááda";
   ?>
-
 </body>
 
 </html>

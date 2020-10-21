@@ -1,10 +1,31 @@
-let points = 0;
+function Load() {
+    let points = 0;
 
-const checkBox = document.getElementsByClassName("check");
-const form = document.getElementById("form");
-const btn = document.getElementById("comp");
+    const checkBox = document.getElementsByClassName("check");
 
-function comp() {
-    
+    let btn = document.querySelector("#btn-comp");
+    let arrow = document.querySelector("#arrow-icon");
+    btn.addEventListener("click", myFunction);
+    arrow.addEventListener("click", arrowClick);
+
+    function myFunction() {
+        document.getElementById("form").style.height = "5vh";
+        document.getElementById("form-items").style.visibility = "hidden";
+        arrow.style.visibility = "visible";
+    }
+
+
+
+    function arrowClick() {
+        if(arrow.classList.contains("open")){
+            arrow.classList.remove("open");
+        }
+        else{
+            arrow.classList.add("open");
+        }
+    }
+
+
+
+
 }
-
