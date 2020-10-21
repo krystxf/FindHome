@@ -8,12 +8,15 @@ html, body
 #title
 {
   font-family: sans-serif;
-  background-color: #ffffff;
+  background-color: white;
+  background-image: url("images/find-home-web.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
   color: #242424;
   height: 10vh;
+  width: 100%;
   font-size: 7vh;
-  text-align: center;
-  padding: auto;
 }
 
 #content
@@ -29,7 +32,7 @@ html, body
 {
   background-color: #242424;
   margin: 0 5% 0 0%;
-  border-radius: 0 2em 2em 0;
+  border-radius: 0 10px 10px 0;
   color: 242424;
   grid-column: 1;
   height: 100%;
@@ -44,12 +47,23 @@ html, body
   text-align: center;
 }
 
+#right
+{
+  grid-column: 2;
+  width: auto;
+}
+
 #map
 {
-  border-radius: 2em 0 0 2em;
-  grid-column: 2;
-  height: 100%;
-  width: auto;
+  height: calc(100% - 1.4em);
+  border-radius: 10px 0 0 0;
+}
+
+#map-settings
+{
+  background-color: #B70007;
+  height: 1.4em;
+  border-radius: 0 0 0 10px;
 }
 
 #floating-panel {

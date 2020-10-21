@@ -6,6 +6,7 @@
     <!-- map javascript -->
     <script src="index.js"></script>
     <title>Kde domov můj</title>
+    <link rel="icon" type="image/png" href="images/find-home.ico">
     <!-- Radši bych to tady nechal pro jistotu-->
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
 
@@ -14,7 +15,6 @@
   </head>
   <body>
     <div id = "title">
-      kde domov můj
     </div>
 
 
@@ -28,8 +28,12 @@
 
 </form>
   </div>
+  <div id="right">
     <div id="map">
     </div>
+    <div id="map-settings">
+    </div>
+</div>
 </div>
 <div id ="table">
 </table>
