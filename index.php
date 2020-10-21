@@ -14,28 +14,23 @@
 	  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqac8iFjKYK_AIRaoRxXfYaTJE3CSkmUI&callback=initMap&libraries=visualization&v=weekly" defer></script>
   </head>
   <body>
-    <div id = "title">
+    <div id = "navbar">
+          <img src="images/find-home-web" height="100%"></img>
+          <ul>
+          <li><a href="#">o nás</a></li>
+          <li><a href="#">kontakt</a></li>
+          <li><a href="#">mapa</a></li>
+          </ul>
     </div>
 
-
-    <div id="floating-panel">
-      <button onclick="changeOpacity()">Change opacity</button>
-    </div>
-    <div id = "content">
-  <div id="form">
-    <h2>Form</h2>
-    <form>
-
-</form>
-  </div>
-  <div id="right">
     <div id="map">
     </div>
     <div id="map-settings">
+    <ul>
+          <li><a href="#">o nás</a></li>
+          <li><a href="#">kontakt</a></li>
+          <li><a href="#">mapa</a></li>
+          </ul>
     </div>
-</div>
-</div>
-<div id ="table">
-</table>
   </body>
 </html>

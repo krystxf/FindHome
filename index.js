@@ -1,8 +1,9 @@
 let map, heatmap;
+let state = "shown";
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
+    zoom: 11,
     center: { lat: 50.035553, lng: 15.762851 },
     mapTypeId: "terrain",
   });
@@ -17,7 +18,6 @@ function changeOpacity() {
   heatmap.set("opacity", heatmap.get("opacity") ? null : 0.2);
 }
 
-// Heatmap data: 500 Points
 function getPoints() {
   return [
     new google.maps.LatLng(50.035553, 15.762851),
