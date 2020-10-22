@@ -1,7 +1,7 @@
 function Load() {
 
 
-    const obyvatele = document.querySelector(".checkbox-obyvatele");
+    const obyvatele = document.querySelector(".slider-obyvatele");
     const zivot = document.querySelector(".checkbox-delka-zivota");
     const nezamestnanost = document.querySelector(".checkbox-delka-nezamestnanost");
     const ovzdusi = document.querySelector(".checkbox-ovzdusi");
@@ -26,14 +26,6 @@ function Load() {
 
     var arr = [];
 
-    var okres = {
-        nazev: "",
-        kvalitaOvzdusi: null,
-        delkaZivota: null,
-        nezamestnanost: null,
-        zalidneni: "",
-        skore: null,
-    }
 
     function save(nazev) {
         arr.push(nazev);
@@ -43,17 +35,17 @@ function Load() {
     fetch('https://hackathon.madhome.cf/api/get')
         .then(response => response.json())
         .then(data => data.forEach(element => {
-            const x = Object.create(okres);
+            const x = {};
             x.nazev = element.nazev;
             x.znecisteni = element.znecisteni;
             x.delkazivota = element.delkazivota;
             x.nezamestnanost = element.nezamestnanost;
-            x.pocet_obyvatel = element.pocet_obyvatel;
+            x.pocet_obyvatel = parseInt(element.pocet_obyvatel);
             save(x);
         }));
 
     function filled() {
-        if (obyvatele.checked == true) {
+        if (obyvatele.value) {
             arr.sort((a, b) => (a.pocet_obyvatel > b.pocet_obyvatel) ? 1 : -1);
 
             for (let index = 0; index < arr.length; index++) {
