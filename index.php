@@ -19,7 +19,7 @@
     <a href="index.php"><img src="images/find-home-web" id="logo"></img></a>
     <ul>
       <li><a href="#map">MAPA</a></li>
-      <li><a href="#">O PROJEKTU</a></li>
+      <li><a href="web/about/about.html">O PROJEKTU</a></li>
       <li><a href="web/contacts/kontakt.html">KONTAKTY</a></li>
     </ul>
   </div>
