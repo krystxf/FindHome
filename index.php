@@ -27,24 +27,21 @@
   <div id="form">
     <div id="form-items">
       <div id="checkboxes">
-        <label class="container">Počet obyvatel
-          <input type="checkbox">
-          <input class="chck" type="checkbox">
-          <span class="checkmark"></span>
+          <input class="slider-obyvatele" type="range" min="1" max="100" value="50">
         </label>
         <label class="container">Délka života
-          <input type="checkbox">
-          <input class="chck" type="checkbox">
+          <input class="checkbox-delka-zivota" type="checkbox">
+          <input class="checkbox-delka-zivota" type="checkbox">
           <span class="checkmark"></span>
         </label>
         <label class="container">Nezaměstnanost
-          <input type="checkbox">
-          <input class="chck" type="checkbox">
+          <input class="checkbox-delka-nezamestnanost" type="checkbox">
+          <input class="checkbox-delka-nezamestnanost" type="checkbox">
           <span class="checkmark"></span>
         </label>
         <label class="container">Kvalita ovzduší
-          <input type="checkbox">
-          <input class="chck" type="checkbox">
+          <input class="checkbox-ovzdusi" type="checkbox">
+          <input class="checkbox-ovzdusi" type="checkbox">
           <span class="checkmark"></span>
         </label>
       </div>
