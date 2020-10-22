@@ -41,12 +41,12 @@ function Load() {
         if (obyvatele[0].checked == 1) {
              min_obyvatele = 0;
              max_obyvatele = 50000;
-        } else if (obyvatele[1].checked == 1) {
-             min_obyvatele = 50000;
-             max_obyvatele = 500000;
-        } else {
-             min_obyvatele = 1000000;
-             max_obyvatele = 5000000;
+            } else if (obyvatele[1].checked == 1) {
+                min_obyvatele = 50000;
+                max_obyvatele = 500000;
+            } else {
+                min_obyvatele = 500000;
+                max_obyvatele = 5000000;
         }
         console.log(min_obyvatele);
         console.log(max_obyvatele);
@@ -54,7 +54,15 @@ function Load() {
         drawJaxvine(zmrd);
         for (let index = 0; index < arr.length; index++) {
             if (arr[index].pocet_obyvatel >= min_obyvatele && arr[index].pocet_obyvatel <= max_obyvatele) {
-                zmrd.push(arr[index].nazev)
+                zmrd.push(arr[index].nazev);
+                if (arr[index].nazev == "Praha 1"){
+                    for (let i = 1; i <= 10; i++) {
+                        zmrd.push("Praha "+i);
+                    }
+                    zmrd.push("Praha - západ");
+                    zmrd.push("Praha - východ");                    
+                }
+                //console.log(arr[index].nazev + " - " + arr[index].pocet_obyvatel);
             }
         }
         drawJaxvine(zmrd);
