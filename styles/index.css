@@ -84,9 +84,9 @@ h3 {
 }
 
 #contacts {
+  margin: auto;
   text-align: center;
   list-style-type: none;
-  font-size: 25px;
   text-decoration: none;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -154,7 +154,7 @@ td a {
   margin-top: 12vh;
   margin-bottom: 5vh;
   width: 70%;
-  height: 70vh;
+  min-height: 70vh;
 }
 
 
@@ -170,8 +170,8 @@ td a {
 }
 
 #contacts td {
-  padding-left: 6.5em;
-  padding-top: 2em;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 #navbar ul li a {

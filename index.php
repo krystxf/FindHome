@@ -16,7 +16,7 @@
 
 <body onload="Load()">
   <div id="navbar">
-    <a href="index.php"><img src="images/find-home-web" id="logo"></img></a>
+    <a href="index.php"><img src="images/find-home-web.png" id="logo"></img></a>
     <ul>
       <li><a href="#map">MAPA</a></li>
       <li><a href="web/about/about.html">O PROJEKTU</a></li>

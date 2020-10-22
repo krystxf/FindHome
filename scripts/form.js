@@ -107,6 +107,7 @@ function Load() {
             arrow.style.bottom = "76%";
             filled();
         } else {
+            location.reload();
             arrow.classList.add("open");
             document.getElementById("form-items").style.visibility = "visible";
             arrow.style.bottom = "44%";
