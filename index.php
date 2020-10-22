@@ -30,19 +30,19 @@
     <div id="form-items">
       <div id="checkboxes">
         <label class="container">POČET OBYVATEL
-          <input type="checkbox">
+          <input class="chck" type="checkbox">
           <span class="checkmark"></span>
         </label>
         <label class="container">DÉLKA ŽIVOTA
-          <input type="checkbox">
+          <input class="chck" type="checkbox">
           <span class="checkmark"></span>
         </label>
         <label class="container">NEZAMĚSTNANOST
-          <input type="checkbox">
+          <input class="chck" type="checkbox">
           <span class="checkmark"></span>
         </label>
         <label class="container">KVALITA OVZDUŠÍ
-          <input type="checkbox">
+          <input class="chck" type="checkbox">
           <span class="checkmark"></span>
         </label>
       </div>
