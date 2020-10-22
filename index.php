@@ -9,7 +9,7 @@
   <!-- favicon -->
   <link rel="icon" type="image/png" href="images/find-home.ico">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find home</title>
 
 </head>
@@ -27,8 +27,7 @@
   <div id="form">
     <div id="form-items">
       <div id="checkboxes">
-
-      <div id="form-pocet-obyv">
+        <div id="form-pocet-obyv">
           <h3>Počet obyvatel</h3>
           <div id="pocet-obyv">
             <input class="checkbox-obyvatele0" id="ob0" value="nula" name="obyvatele" type="radio">
@@ -49,7 +48,6 @@
           </div>
         </div>
       </div>
-      </div>
 
       <div id="form-delka-zivota">
         <h3>Délka života</h3>
@@ -66,11 +64,12 @@
       </div>
 
       <div id="form-ovzdusi">
-      <h3>Kvalita ovzduší</h3>
-      <input type="range" class="slider-ovzdusi" name="obyvatele1" min="60" max="100">
-      </label>
+        <h3>Kvalita ovzduší</h3>
+        <input type="range" class="slider-ovzdusi" name="obyvatele1" min="60" max="100">
+        </label>
       </div>
     </div>
+  </div>
   </div>
   <a id="arrow-icon" class="open">
     <span class="left-bar"></span>
