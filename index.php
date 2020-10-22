@@ -8,10 +8,8 @@
 
   <!-- favicon -->
   <link rel="icon" type="image/png" href="images/find-home.ico">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
-          integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-          crossorigin=""/>
-  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+
   <title>Find home</title>
 
 </head>
@@ -29,41 +27,36 @@
   <div id="form">
     <div id="form-items">
       <div id="checkboxes">
-        <label class="container">POČET OBYVATEL
-          <input class="chck" type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">DÉLKA ŽIVOTA
-          <input class="chck" type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">NEZAMĚSTNANOST
-          <input class="chck" type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">KVALITA OVZDUŠÍ
-          <input class="chck" type="checkbox">
-          <span class="checkmark"></span>
-        </label>
+        POČET OBYVATEL: <br>
+        <input type="text"> -  <input type="text"><br>
+        MINIMÁLNÍ DÉLKA ŽIVOTA: <br>
+        <input type="text"> let <br>
+        MAXIMÁLNÍ NEZAMĚSTNANOST: <br>
+        <input type="text"> % <br>
+        MINIMÁLNÍ KVALITA OVZDUŠÍ:
+        <div class="slider"></div>
+          <div class="slider-rail"></div>
+          <div class="slider-fill"></div>
+          <div class="slider-handle"></div>
+          <input class="slider-input" type="range" min="0" max="100" />
+        </div>
       </div>
     </div>
     <a id="arrow-icon" class="open">
-        <span class="left-bar"></span>
-        <span class="right-bar"></span>
-      </a>
+      <span class="left-bar"></span>
+      <span class="right-bar"></span>
+    </a>
   </div>
 
   <div id="map">
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-        crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 
-<script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+  <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
 
-<script src="scripts/form.js"></script>
-<script src="scripts/mapa.js"></script>
+  <script src="scripts/form.js"></script>
+  <script src="scripts/mapa.js"></script>
 </body>
 
 </html>

@@ -50,7 +50,7 @@ let map = L.map('map');
     async function getGeoData(url) {
         let response = await fetch(url);
         let data = await response.json();
-        console.log(data)
+        //console.log(data)
         return data;
     }
 

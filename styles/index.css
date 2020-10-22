@@ -1,6 +1,6 @@
 @font-face {
   font-family: evogria;
-  src: url(fonts/Evogria.otf);
+  src: url(../fonts/Evogria.otf);
 }
 
 .container {
@@ -89,6 +89,12 @@ body {
   background-position: center;
   height: 70px;
   width: 100%;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: white; /* Otherwise white in Chrome */
 }
 
 #navbar ul {

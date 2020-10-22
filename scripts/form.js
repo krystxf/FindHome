@@ -7,21 +7,9 @@ function Load() {
     var nezamestnanost;
     var delkaZivota;
 
-    fetch('https://hackathon.madhome.cf/api/obyvatelstvo2')
+    fetch('https://hackathon.madhome.cf/api/get')
         .then(response => response.json())
-        .then(data => console.log(data));
-
-    fetch('https://hackathon.madhome.cf/api/znecisteni')
-        .then(response => response.json())
-        .then(data => console.log(data));
-
-    fetch('https://hackathon.madhome.cf/api/delkazivota')
-        .then(response => response.json())
-        .then(data => console.log(data));
-
-    fetch('https://hackathon.madhome.cf/api/nezamestnanost')
-        .then(response => response.json())
-        .then(data => console.log(data));
+        .then(data => data.forEach(item => console.log(item)));
 
 
     let checkBox = document.getElementsByTagName("chck");
