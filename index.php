@@ -31,20 +31,20 @@
         <div id="form-pocet-obyv">
           <h3>Počet obyvatel</h3>
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele" value="0" name="obyvatele" type="radio">
-            <label class="container">Málo
+            <input class="checkbox-obyvatele" id="ob0" value="0" name="obyvatele" type="radio">
+            <label class="container" for="ob0">Málo
             </label>
           </div>
 
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele" value="1" name="obyvatele" type="radio">
-            <label class="container">Středně
+            <input class="checkbox-obyvatele" id="ob1" value="1" name="obyvatele" type="radio">
+            <label class="container" for="ob1">Středně
             </label>
           </div>
 
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele" value="2" name="obyvatele" type="radio">
-            <label class="container">Hodně
+            <input class="checkbox-obyvatele" id="ob2" value="2" name="obyvatele" type="radio">
+            <label class="container" for="ob2">Hodně
             </label>
           </div>
         </div>
@@ -52,15 +52,15 @@
 
       <div id="form-delka-zivota">
         <h3>Délka života</h3>
-        <input class="checkbox-delka-zivota" type="checkbox">
-        <label class="container">Délka života
+        <input class="checkbox-delka-zivota" id="chck-zivot" type="checkbox">
+        <label class="container" for="chck-zivot">Délka života
         </label>
       </div>
 
       <div id="form-nezamestnanost">
         <h3>Nezaměstnanost</h3>
-        <input class="checkbox-delka-nezamestnanost" type="checkbox">
-        <label class="container">Nezaměstnanost
+        <input class="checkbox-delka-nezamestnanost" id="chck-nezames" type="checkbox">
+        <label class="container" for="chck-nezames">Nezaměstnanost
         </label>
       </div>
 
