@@ -1,38 +1,69 @@
 "use strict";
 
 function Load() {
-  /*Counter*/
-  var points = 0;
-  var pocetObyvatel;
-  var znecisteni; //mensi je horsi
-
-  var nezamestnanost;
-  var delkaZivota;
-  fetch('https://hackathon.madhome.cf/api/obyvatelstvo2').then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    return console.log(data);
-  });
-  fetch('https://hackathon.madhome.cf/api/znecisteni').then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    return console.log(data);
-  });
-  fetch('https://hackathon.madhome.cf/api/delkazivota').then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    return console.log(data);
-  });
-  fetch('https://hackathon.madhome.cf/api/nezamestnanost').then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    return console.log(data);
-  });
-  var checkBox = document.getElementsByTagName("chck");
+  var obyvatele = document.querySelector(".checkbox-obyvatele");
+  var zivot = document.querySelector(".checkbox-delka-zivota");
+  var nezamestnanost = document.querySelector(".checkbox-delka-nezamestnanost");
+  var ovzdusi = document.querySelector(".slider-ovzdusi");
   var arrow = document.querySelector("#arrow-icon");
-  var form = document.querySelector("#form");
   arrow.addEventListener("click", arrowClick);
-  /*Arrow animation*/
+  var checkBox = document.getElementsByClassName("check");
+  var form = document.querySelector("#form");
+
+  if (obyvatele == 0) {
+    var _min_obyvatele = 0;
+    var _max_obyvatele = 100000;
+  } else if (obyvatele == 1) {
+    var _min_obyvatele2 = 100000;
+    var _max_obyvatele2 = 500000;
+  } else {
+    var _min_obyvatele3 = 500000;
+    var _max_obyvatele3 = 5000000;
+  }
+  /*Counter*/
+
+
+  var points = 0;
+  var arr = [];
+
+  function save(nazev) {
+    arr.push(nazev); //arr.forEach(element => console.log(element.pocet_obyvatel));
+  }
+
+  fetch('https://hackathon.madhome.cf/api/get').then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    return data.forEach(function (element) {
+      var x = {};
+      x.nazev = element.nazev;
+      x.znecisteni = parseInt(element.znecisteni);
+      x.delkazivota = parseInt(element.delkazivota);
+      x.nezamestnanost = parseFloat(element.nezamestnanost);
+      x.pocet_obyvatel = parseInt(element.pocet_obyvatel);
+      save(x);
+    });
+  });
+
+  function filled() {
+    if (obyvatele.value) {
+      arr.sort(function (a, b) {
+        return a.pocet_obyvatel > b.pocet_obyvatel ? 1 : -1;
+      });
+      arr.sort(function (a, b) {
+        return a.znecisteni > b.znecisteni ? 1 : -1;
+      });
+
+      for (var index = 0; index < arr.length; index++) {
+        console.log(arr[index].znecisteni);
+      }
+
+      for (var _index = 0; _index < arr.length; _index++) {
+        if (arr[_index].znecisteni >= ovzdusi && arr[_index].pocet_obyvatel >= min_obyvatele && arr[_index].pocet_obyvatel <= max_obyvatele) {
+          console.log(arr[_index].pocet_obyvatel);
+        }
+      }
+    } else {}
+  }
 
   function arrowClick() {
     if (arrow.classList.contains("open")) {
@@ -41,11 +72,12 @@ function Load() {
       form.style.height = "8vh";
       arrow.style.bottom = "77%";
       arrow.style.margin = "0.5em";
+      filled();
     } else {
       arrow.classList.add("open");
       document.getElementById("form-items").style.visibility = "visible";
-      form.style.height = "50vh";
-      arrow.style.bottom = "35%";
+      arrow.style.bottom = "43%";
+      form.style.height = "41vh";
     }
   }
 }

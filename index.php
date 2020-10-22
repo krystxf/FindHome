@@ -27,29 +27,54 @@
   <div id="form">
     <div id="form-items">
       <div id="checkboxes">
-          <input class="slider-obyvatele" type="range" min="1" max="100" value="50">
-        </label>
+
+        <div id="form-pocet-obyv">
+          <h3>Počet obyvatel</h3>
+          <div id="pocet-obyv">
+            <input class="checkbox-obyvatele" value="0" name="obyvatele" type="radio">
+            <label class="container">Málo
+            </label>
+          </div>
+
+          <div id="pocet-obyv">
+            <input class="checkbox-obyvatele" value="1" name="obyvatele" type="radio">
+            <label class="container">Středně
+            </label>
+          </div>
+
+          <div id="pocet-obyv">
+            <input class="checkbox-obyvatele" value="2" name="obyvatele" type="radio">
+            <label class="container">Hodně
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div id="form-delka-zivota">
+        <h3>Délka života</h3>
+        <input class="checkbox-delka-zivota" type="checkbox">
         <label class="container">Délka života
-          <input class="checkbox-delka-zivota" type="checkbox">
-          <input class="checkbox-delka-zivota" type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Nezaměstnanost
-          <input class="checkbox-delka-nezamestnanost" type="checkbox">
-          <input class="checkbox-delka-nezamestnanost" type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">Kvalita ovzduší
-          <input class="checkbox-ovzdusi" type="checkbox">
-          <input class="checkbox-ovzdusi" type="checkbox">
-          <span class="checkmark"></span>
         </label>
       </div>
+
+      <div id="form-nezamestnanost">
+        <h3>Nezaměstnanost</h3>
+        <input class="checkbox-delka-nezamestnanost" type="checkbox">
+        <label class="container">Nezaměstnanost
+        </label>
+      </div>
+
+      <div id="form-ovzdusi">
+      <h3>Kvalita ovzduší</h3>
+      <input type="range" class="slider-ovzdusi" name="obyvatele" min="60" max="100">
+      </label>
+      </div>
     </div>
-    <a id="arrow-icon" class="open">
-      <span class="left-bar"></span>
-      <span class="right-bar"></span>
-    </a>
+  </div>
+  <a id="arrow-icon" class="open">
+    <span class="left-bar"></span>
+    <span class="right-bar"></span>
+  </a>
   </div>
 
   <div id="map">

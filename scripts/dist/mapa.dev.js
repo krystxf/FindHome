@@ -46,7 +46,7 @@ var geojson = L.topoJson(null, {
     };
   },
   onEachFeature: function onEachFeature(feature, layer) {
-    layer.bindPopup('<p>' + feature.properties.nazev + '</p>');
+    layer.bindPopup('<p>' + feature.properties.NAME_2 + '</p>');
   }
 }).addTo(map); //fill: #317581;
 //define a function to get and parse geojson from URL
@@ -67,10 +67,9 @@ function getGeoData(url) {
 
         case 5:
           data = _context.sent;
-          console.log(data);
           return _context.abrupt("return", data);
 
-        case 8:
+        case 7:
         case "end":
           return _context.stop();
       }

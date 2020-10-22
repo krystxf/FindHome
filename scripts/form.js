@@ -1,28 +1,29 @@
 function Load() {
 
-
-    const obyvatele = document.querySelector(".slider-obyvatele");
+    const obyvatele = document.querySelector(".checkbox-obyvatele");
     const zivot = document.querySelector(".checkbox-delka-zivota");
     const nezamestnanost = document.querySelector(".checkbox-delka-nezamestnanost");
-    const ovzdusi = document.querySelector(".checkbox-ovzdusi");
+    const ovzdusi = document.querySelector(".slider-ovzdusi");
 
     const arrow = document.querySelector("#arrow-icon");
     arrow.addEventListener("click", arrowClick);
     const checkBox = document.getElementsByClassName("check");
     const form = document.querySelector("#form");
 
-
+    if (obyvatele == 0) {
+        const min_obyvatele = 0;
+        const max_obyvatele = 100000;
+    } else if (obyvatele == 1) {
+        const min_obyvatele = 100000;
+        const max_obyvatele = 500000;
+    } else {
+        const min_obyvatele = 500000;
+        const max_obyvatele = 5000000;
+    }
 
 
     /*Counter*/
     let points = 0;
-    /*    pole [mesto][poradi ovzdusi][poradi delka zivota] OK
-    
-        delka zivota on
-        ovzdusi on
-    
-        [mesto][skore] = [mesto][poradi ovzdusi] + [mesto][poradi delka zivota]
-        */
 
     var arr = [];
 
@@ -37,9 +38,9 @@ function Load() {
         .then(data => data.forEach(element => {
             const x = {};
             x.nazev = element.nazev;
-            x.znecisteni = element.znecisteni;
-            x.delkazivota = element.delkazivota;
-            x.nezamestnanost = element.nezamestnanost;
+            x.znecisteni = parseInt(element.znecisteni);
+            x.delkazivota = parseInt(element.delkazivota);
+            x.nezamestnanost = parseFloat(element.nezamestnanost);
             x.pocet_obyvatel = parseInt(element.pocet_obyvatel);
             save(x);
         }));
@@ -48,8 +49,16 @@ function Load() {
         if (obyvatele.value) {
             arr.sort((a, b) => (a.pocet_obyvatel > b.pocet_obyvatel) ? 1 : -1);
 
+            arr.sort((a, b) => (a.znecisteni > b.znecisteni) ? 1 : -1);
+
             for (let index = 0; index < arr.length; index++) {
-                console.log(arr[index].pocet_obyvatel);
+                console.log(arr[index].znecisteni);
+            }
+
+            for (let index = 0; index < arr.length; index++) {
+                if (arr[index].znecisteni >= ovzdusi && arr[index].pocet_obyvatel >= min_obyvatele && arr[index].pocet_obyvatel <= max_obyvatele) {
+                    console.log(arr[index].pocet_obyvatel);
+                }
             }
         } else {
 
@@ -67,8 +76,8 @@ function Load() {
         } else {
             arrow.classList.add("open");
             document.getElementById("form-items").style.visibility = "visible";
-            form.style.height = "50vh";
-            arrow.style.bottom = "35%";
+            arrow.style.bottom = "43%";
+            form.style.height = "41vh";
         }
     }
 }

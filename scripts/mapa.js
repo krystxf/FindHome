@@ -42,7 +42,7 @@ let map = L.map('map');
             }
         },
         onEachFeature: function(feature, layer) {
-            layer.bindPopup('<p>'+feature.properties.nazev+'</p>')
+            layer.bindPopup('<p>'+feature.properties.NAME_2+'</p>')
         }
     }).addTo(map);
     //fill: #317581;

@@ -8,7 +8,8 @@
   cursor: pointer;
   border-radius: 4px;
   left: 50%;
-  bottom: 35%;
+  transform: translateX(-50%);
+  bottom: 43%;
 }
 
 .left-bar {
