@@ -28,16 +28,16 @@
     <div id="form-items">
       <div id="checkboxes">
 
-        <div id="form-pocet-obyv">
+      <div id="form-pocet-obyv">
           <h3>Počet obyvatel</h3>
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele0" id="ob0" value="0" name="obyvatele" type="radio">
+            <input class="checkbox-obyvatele0" id="ob0" value="nula" name="obyvatele" type="radio">
             <label class="container" for="ob0">Málo
             </label>
           </div>
 
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele1" id="ob1" value="1" name="obyvatele" type="radio">
+            <input class="checkbox-obyvatele1" id="ob1" value="1" name="obyvatele" type="radio" checked>
             <label class="container" for="ob1">Středně
             </label>
           </div>
@@ -48,6 +48,7 @@
             </label>
           </div>
         </div>
+      </div>
       </div>
 
       <div id="form-delka-zivota">
@@ -66,7 +67,7 @@
 
       <div id="form-ovzdusi">
       <h3>Kvalita ovzduší</h3>
-      <input type="range" class="slider-ovzdusi" name="obyvatele" min="60" max="100">
+      <input type="range" class="slider-ovzdusi" name="obyvatele1" min="60" max="100">
       </label>
       </div>
     </div>
