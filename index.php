@@ -31,19 +31,19 @@
         <div id="form-pocet-obyv">
           <h3>Počet obyvatel</h3>
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele" id="ob0" value="0" name="obyvatele" type="radio">
+            <input class="checkbox-obyvatele0" id="ob0" value="0" name="obyvatele" type="radio">
             <label class="container" for="ob0">Málo
             </label>
           </div>
 
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele" id="ob1" value="1" name="obyvatele" type="radio">
+            <input class="checkbox-obyvatele1" id="ob1" value="1" name="obyvatele" type="radio">
             <label class="container" for="ob1">Středně
             </label>
           </div>
 
           <div id="pocet-obyv">
-            <input class="checkbox-obyvatele" id="ob2" value="2" name="obyvatele" type="radio">
+            <input class="checkbox-obyvatele2" id="ob2" value="2" name="obyvatele" type="radio">
             <label class="container" for="ob2">Hodně
             </label>
           </div>

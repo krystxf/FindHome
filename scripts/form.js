@@ -1,6 +1,9 @@
 function Load() {
 
-    const obyvatele = document.querySelector(".checkbox-obyvatele");
+    const obyvatele0 = document.querySelector(".checkbox-obyvatele0");
+    const obyvatele1 = document.querySelector(".checkbox-obyvatele1");
+    const obyvatele2 = document.querySelector(".checkbox-obyvatele2");
+
     const zivot = document.querySelector(".checkbox-delka-zivota");
     const nezamestnanost = document.querySelector(".checkbox-delka-nezamestnanost");
     const ovzdusi = document.querySelector(".slider-ovzdusi");
@@ -21,6 +24,7 @@ function Load() {
         const max_obyvatele = 5000000;
     }
 
+    console.log(obyvatele.value);
 
     /*Counter*/
     let points = 0;
@@ -47,7 +51,7 @@ function Load() {
 
     function filled() {
         if (obyvatele.value) {
-            arr.sort((a, b) => (a.pocet_obyvatel > b.pocet_obyvatel) ? 1 : -1);
+            arr.sort((a, b) => (a.pocet_obyvatel0 > b.pocet_obyvatel0) ? 1 : -1);
 
             arr.sort((a, b) => (a.znecisteni > b.znecisteni) ? 1 : -1);
 
@@ -56,7 +60,7 @@ function Load() {
             }
 
             for (let index = 0; index < arr.length; index++) {
-                if (arr[index].znecisteni >= ovzdusi && arr[index].pocet_obyvatel >= min_obyvatele && arr[index].pocet_obyvatel <= max_obyvatele) {
+                if (arr[index].znecisteni >= ovzdusi && arr[index].pocet_obyvatel >= min_obyvatele && arr[index].pocet_obyvatel0 <= max_obyvatele) {
                     console.log(arr[index].pocet_obyvatel);
                 }
             }
@@ -75,8 +79,8 @@ function Load() {
         } else {
             arrow.classList.add("open");
             document.getElementById("form-items").style.visibility = "visible";
-            arrow.style.bottom = "44%";
-            form.style.height = "41vh";
+            arrow.style.bottom = "35%";
+            form.style.height = "50vh";
         }
     }
 }
