@@ -2,15 +2,39 @@ function Load() {
 
     /*Counter*/
     let points = 0;
-    var pocetObyvatel;
-    var znecisteni; //mensi je horsi
-    var nezamestnanost;
-    var delkaZivota;
+    /*    pole [mesto][poradi ovzdusi][poradi delka zivota]
+    
+        delka zivota on
+        ovzdusi on
+    
+        [mesto][skore] = [mesto][poradi ovzdusi] + [mesto][poradi delka zivota]
+        */
+    var okres = {
+        nazev: "",
+        kvalitaOvzdusi: "",
+        delkaZivota: "",
+        nezamestnanost: "",
+        zalidneni: "",
+    }
+
+    let arr = [];
 
     fetch('https://hackathon.madhome.cf/api/get')
         .then(response => response.json())
-        .then(data => data.forEach(item => console.log(item)));
+        .then(data => {
+            data.forEach(element => {
+                okres.nazev = element.nazev;
+                okres.kvalitaOvzdusi = element.kvalitaOvzdusi;
+                okres.delkaZivota = element.delkaZivota;
+                okres.nezamestnanost = element.nezamestnanost;
+                okres.zalidneni = element.zalidneni;
+                arr.push(okres);
+            });
+        });
 
+        arr.forEach(element => {
+            console.log(element);
+        });
 
     let checkBox = document.getElementsByTagName("chck");
     let arrow = document.querySelector("#arrow-icon");

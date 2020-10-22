@@ -27,19 +27,26 @@
   <div id="form">
     <div id="form-items">
       <div id="checkboxes">
-        POČET OBYVATEL: <br>
-        <input type="text"> -  <input type="text"><br>
-        MINIMÁLNÍ DÉLKA ŽIVOTA: <br>
-        <input type="text"> let <br>
-        MAXIMÁLNÍ NEZAMĚSTNANOST: <br>
-        <input type="text"> % <br>
-        MINIMÁLNÍ KVALITA OVZDUŠÍ:
-        <div class="slider"></div>
-          <div class="slider-rail"></div>
-          <div class="slider-fill"></div>
-          <div class="slider-handle"></div>
-          <input class="slider-input" type="range" min="0" max="100" />
-        </div>
+        <label class="container">Počet obyvatel
+          <input type="checkbox">
+          <input class="chck" type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Délka života
+          <input type="checkbox">
+          <input class="chck" type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Nezaměstnanost
+          <input type="checkbox">
+          <input class="chck" type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Kvalita ovzduší
+          <input type="checkbox">
+          <input class="chck" type="checkbox">
+          <span class="checkmark"></span>
+        </label>
       </div>
     </div>
     <a id="arrow-icon" class="open">
