@@ -40,12 +40,12 @@ async function getGeoData(url) {
     //console.log(data)
     return data;
 }
-function drawJaxvine(zmrd) {
+function drawOkres(zmrd) {
     var geojson = L.topoJson(null, {
         style: function (feature) {
             for (let i = 0; i < zmrd.length; i++) {
                 if (feature.properties.NAME_2 == zmrd[i]) {
-                    console.log(zmrd[i])
+                    //console.log(zmrd[i])
                     return {
                         color: "#0000FF",
                         opacity: 1,

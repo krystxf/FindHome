@@ -48,35 +48,54 @@ function Load() {
             min_obyvatele = 500000;
             max_obyvatele = 5000000;
         }
-        console.log(zivot.checked);
-        console.log(max_obyvatele);
-        var zmrd = [];
-        drawJaxvine(zmrd);
+        //console.log(zivot.checked);
+        //console.log(max_obyvatele);
+        var pole = [];
+        drawOkres(pole);
         for (let index = 0; index < arr.length; index++) {
             if (arr[index].pocet_obyvatel >= min_obyvatele && arr[index].pocet_obyvatel <= max_obyvatele) {
-                if (zivot.checked && delkazivota > 73)
-                    zmrd.push(arr[index].nazev);
-                else if (!zivot.checked)
-                    zmrd.push(arr[index].nazev);
+                let allow = false;
+                if (zivot.checked && arr[index].delkazivota > 77){
+                    if (nezamestnanost1.checked && arr[index].nezamestnanost < 2){
+                        if (arr[index].znecisteni > ovzdusi.value){
+                            allow = true;
+                        }
+                    }
+                    else if (!nezamestnanost1.checked){
+                        if (arr[index].znecisteni > ovzdusi.value){
+                            allow = true;
+                        }
+                    }
+                }
+                else if (!zivot.checked){
+                    if (nezamestnanost1.checked && arr[index].nezamestnanost < 2){
+                        if (arr[index].znecisteni > ovzdusi.value){
+                            allow = true;
+                        }
+                    }
+                    else if (!nezamestnanost1.checked){
+                        if (arr[index].znecisteni > ovzdusi.value){
+                            allow = true;
+                        }
+                    }
+                }                
 
-                if (nezamestnanost.checked && nezamestnanost1 > 20)
-                    zmrd.push(arr[index].nazev);
-                else if (!nezamestnanost.checked)
-                    zmrd.push(arr[index].nazev);
+                if (allow) 
+                    pole.push(arr[index].nazev);
 
 
 
                 if (arr[index].nazev == "Praha 1") {
                     for (let i = 1; i <= 10; i++) {
-                        zmrd.push("Praha " + i);
+                        pole.push("Praha " + i);
                     }
-                    zmrd.push("Praha - západ");
-                    zmrd.push("Praha - východ");
+                    pole.push("Praha - západ");
+                    pole.push("Praha - východ");
                 }
                 //console.log(arr[index].nazev + " - " + arr[index].pocet_obyvatel);
             }
         }
-        drawJaxvine(zmrd);
+        drawOkres(pole);
 
     }
 
