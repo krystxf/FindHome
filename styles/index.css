@@ -9,7 +9,7 @@
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -95,12 +95,13 @@ body {
   font-family: evogria, sans-serif;
   float: right;
   margin: 0;
-  padding-top: 0.8em;
+  padding-top: 0.6em;
   padding-right: 1em;
   list-style-type: none;
 }
 
 #navbar li {
+  border: solid #006464;
   background-color: #37b6ad;
   display: inline-block;
   margin-right: 1em;
@@ -157,6 +158,7 @@ h2{
 }
 
 #form {
+  border: solid #006464;
   border-radius: 10px;
   background-color: #37b6ad;
   margin: auto;
@@ -180,6 +182,7 @@ td a{
 
 #kontakt{
   border-radius: 10px;
+  border: solid #006464;
   background-color: #37b6ad;
   margin: auto;
   margin-top: 12vh;
@@ -189,7 +192,7 @@ td a{
 }
 
 #contacts td{
-  padding-left: 6em;
+  padding-left: 6.5em;
   padding-top: 2em;
 }
 

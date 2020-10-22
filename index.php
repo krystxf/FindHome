@@ -6,33 +6,26 @@
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/anim.css">
 
-  <!-- map formscript -->
-  <script src="scripts/form.js"></script>
-  <!-- map javascript -->
-  <script src="scripts/mapa.js"></script>
-
   <!-- favicon -->
   <link rel="icon" type="image/png" href="images/find-home.ico">
-
-  <!-- map API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqac8iFjKYK_AIRaoRxXfYaTJE3CSkmUI&callback=initMap&libraries=visualization&v=weekly" defer></script>
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+          integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+          crossorigin=""/>
+  
   <title>Find home</title>
 
 </head>
 
 <body onload="Load()">
-  <!-- menu -->
   <div id="navbar">
     <a href="index.php"><img src="images/find-home-web" id="logo"></img></a>
     <ul>
       <li><a href="#map">MAPA</a></li>
       <li><a href="#">O PROJEKTU</a></li>
-      <li><a href="kontakt.html">KONTAKT</a></li>
+      <li><a href="web/contacts/kontakt.html">KONTAKTY</a></li>
     </ul>
   </div>
 
-  <!-- form -->
   <div id="form">
     <div id="form-items">
       <div id="checkboxes">
@@ -60,25 +53,17 @@
       </a>
   </div>
 
-
-  <!-- map -->
   <div id="map">
   </div>
-  <!-- map-settings -->
-  <div id="map-settings">
-    <div id="opaciti-settings">
-      opacity
-      <input type="range" min="10" max="100" value="50" id="sliderValue">
-    </div>
 
-  </div>
-  <?php
-  echo "helou, tady bude ta pravá šmakuláááááááda";
-  ?>
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
 
+<script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
 
-  <script src="scripts/mapa.js"></script>
-
+<script src="scripts/form.js"></script>
+<script src="scripts/mapa.js"></script>
 </body>
 
 </html>
