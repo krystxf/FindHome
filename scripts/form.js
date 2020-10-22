@@ -48,12 +48,18 @@ function Load() {
                 min_obyvatele = 500000;
                 max_obyvatele = 5000000;
         }
-        console.log(min_obyvatele);
+        console.log(zivot.checked);
         console.log(max_obyvatele);
         var zmrd = [];
         drawJaxvine(zmrd);
         for (let index = 0; index < arr.length; index++) {
             if (arr[index].pocet_obyvatel >= min_obyvatele && arr[index].pocet_obyvatel <= max_obyvatele) {
+                if(zivot.checked)
+                {
+                    if(delkazivota > 73)
+                    zmrd.push(arr[index].nazev);
+                }
+                else
                 zmrd.push(arr[index].nazev);
                 if (arr[index].nazev == "Praha 1"){
                     for (let i = 1; i <= 10; i++) {
