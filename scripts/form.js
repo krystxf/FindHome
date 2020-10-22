@@ -70,13 +70,12 @@ function Load() {
             arrow.classList.remove("open");
             document.getElementById("form-items").style.visibility = "hidden";
             form.style.height = "8vh";
-            arrow.style.bottom = "77%";
-            arrow.style.margin = "0.5em";
+            arrow.style.bottom = "76%";
             filled();
         } else {
             arrow.classList.add("open");
             document.getElementById("form-items").style.visibility = "visible";
-            arrow.style.bottom = "43%";
+            arrow.style.bottom = "44%";
             form.style.height = "41vh";
         }
     }
